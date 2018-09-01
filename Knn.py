@@ -37,7 +37,6 @@ modelSum = KNeighborsClassifier(n_neighbors=245) #trecho obtido no site https://
 modelSum.fit(features,labels)
 print('Making predictions based on 245 Nearest Neighbors...')
 predictionSeparate = modelSeparate.predict(imagesTesta)
-print('Esta eh a soma')
 predictionSum = modelSum.predict(featuresTest)
 correctAnswers = 0
 print('Calculating succes percentage for untreated data...')
