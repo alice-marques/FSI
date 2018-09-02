@@ -1,7 +1,7 @@
 from mnist import MNIST
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 import numpy as np
-mndata = MNIST('/home/andre/UnB/FSI/K-NN')
+mndata = MNIST('/home/andre/UnB/FSI/Trabalho1')
 print('Loading trainig data...')
 imagesa,labels = mndata.load_training()
 print('Loading testing data...')
@@ -31,7 +31,8 @@ for num in imagesTest:
     i += 1
     j = 0
 print('Making models and aplying data...')
-modelSimple = LinearDiscriminantAnalysis() #Seguindo a documentação encontrada em: http://scikit-learn.org/stable/modules/generated/sklearn.discriminant_analysis.LinearDiscriminantAnalysis.html#sklearn.discriminant_analysis.LinearDiscriminantAnalysis
+modelSimple = LinearDiscriminantAnalysis()
+#Seguindo a documentacao encontrada em: https://goo.gl/q5AGAr
 modelSimple.fit(imagesa,labels)
 modelSum = LinearDiscriminantAnalysis()
 modelSum.fit(features, labels)
